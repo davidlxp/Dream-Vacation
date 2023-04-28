@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Travel Search</title>
+</head>
+
+<body>
+    <h1>Find Your Dream Vacation</h1>
+    <form action="/search" method="post">
+        <label for="origin">Origin:</label>
+        <input type="text" id="origin" name="origin" required>
+
+        <label for="nights">Number of Nights:</label>
+        <input type="number" id="nights" name="nights" min="1" max="30" required>
+
+        <label for="budget">Budget:</label>
+        <input type="number" id="budget" name="budget" min="1" max="10000" required>
+
+        <button type="submit">Search</button>
+    </form>
+</body>
+
+</html>

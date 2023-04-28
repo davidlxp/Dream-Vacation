@@ -1,0 +1,344 @@
+[
+  {
+    "name": "Regal House",
+    "address": "999 Mountain Road, New York City, United States",
+    "stars": 5,
+    "rating": 8.2,
+    "amenities": [
+      "Free Wi-Fi",
+      "Swimming pool",
+      "Fitness center",
+      "Restaurant",
+      "Bar",
+      "Room service"
+    ],
+    "price_per_night": 436
+  },
+  {
+    "name": "Golden Resort",
+    "address": "707 Heaven Street, New York City, United States",
+    "stars": 4,
+    "rating": 7.8,
+    "amenities": [
+      "Free Wi-Fi",
+      "Swimming pool",
+      "Fitness center",
+      "Restaurant"
+    ],
+    "price_per_night": 154
+  },
+  {
+    "name": "Copper Shelter",
+    "address": "123 Main Street, New York City, United States",
+    "stars": 4,
+    "rating": 9.5,
+    "amenities": [
+      "Free Wi-Fi",
+      "Swimming pool",
+      "Fitness center",
+      "Restaurant",
+      "Bar"
+    ],
+    "price_per_night": 183
+  },
+  {
+    "name": "Plaza Motel",
+    "address": "123 Main Street, New York City, United States",
+    "stars": 5,
+    "rating": 5.9,
+    "amenities": [
+      "Free Wi-Fi",
+      "Swimming pool",
+      "Fitness center",
+      "Restaurant",
+      "Bar",
+      "Room service"
+    ],
+    "price_per_night": 401
+  },
+  {
+    "name": "Emperor Motel",
+    "address": "King's First Blvd, New York City, United States",
+    "stars": 5,
+    "rating": 8.5,
+    "amenities": [
+      "Free Wi-Fi",
+      "Swimming pool",
+      "Fitness center",
+      "Restaurant",
+      "Bar"
+    ],
+    "price_per_night": 364
+  },
+  {
+    "name": "Majestic House",
+    "address": "123 Main Street, Los Angeles, United States",
+    "stars": 3,
+    "rating": 6.6,
+    "amenities": [
+      "Free Wi-Fi",
+      "Swimming pool",
+      "Fitness center"
+    ],
+    "price_per_night": 63
+  },
+  {
+    "name": "Bluebell Lodge",
+    "address": "King's First Blvd, Los Angeles, United States",
+    "stars": 5,
+    "rating": 5.9,
+    "amenities": [
+      "Free Wi-Fi",
+      "Swimming pool",
+      "Fitness center",
+      "Restaurant",
+      "Bar",
+      "Room service"
+    ],
+    "price_per_night": 235
+  },
+  {
+    "name": "Blue Beach Hotel",
+    "address": "999 Mountain Road, Los Angeles, United States",
+    "stars": 5,
+    "rating": 9.4,
+    "amenities": [
+      "Free Wi-Fi",
+      "Swimming pool",
+      "Fitness center",
+      "Restaurant",
+      "Bar"
+    ],
+    "price_per_night": 214
+  },
+  {
+    "name": "Majestic Lodge",
+    "address": "Diamond Fourth Avenue, Los Angeles, United States",
+    "stars": 5,
+    "rating": 8.8,
+    "amenities": [
+      "Free Wi-Fi",
+      "Swimming pool",
+      "Fitness center",
+      "Restaurant",
+      "Bar"
+    ],
+    "price_per_night": 372
+  },
+  {
+    "name": "Emerald Resort",
+    "address": "123 Main Street, Los Angeles, United States",
+    "stars": 3,
+    "rating": 5.3,
+    "amenities": [
+      "Free Wi-Fi",
+      "Swimming pool",
+      "Fitness center",
+      "Restaurant"
+    ],
+    "price_per_night": 70
+  },
+  {
+    "name": "Emperor Resort",
+    "address": "King's First Blvd, London, United Kingdom",
+    "stars": 3,
+    "rating": 5.5,
+    "amenities": [
+      "Free Wi-Fi",
+      "Swimming pool",
+      "Fitness center",
+      "Restaurant"
+    ],
+    "price_per_night": 141
+  },
+  {
+    "name": "Blue Beach Inn",
+    "address": "707 Heaven Street, London, United Kingdom",
+    "stars": 3,
+    "rating": 8,
+    "amenities": [
+      "Free Wi-Fi",
+      "Swimming pool",
+      "Fitness center"
+    ],
+    "price_per_night": 56
+  },
+  {
+    "name": "Quartz Inn",
+    "address": "King's First Blvd, London, United Kingdom",
+    "stars": 5,
+    "rating": 5.9,
+    "amenities": [
+      "Free Wi-Fi",
+      "Swimming pool",
+      "Fitness center",
+      "Restaurant",
+      "Bar"
+    ],
+    "price_per_night": 224
+  },
+  {
+    "name": "Golden Retreat",
+    "address": "999 Mountain Road, London, United Kingdom",
+    "stars": 3,
+    "rating": 6.9,
+    "amenities": [
+      "Free Wi-Fi",
+      "Swimming pool",
+      "Fitness center",
+      "Restaurant"
+    ],
+    "price_per_night": 118
+  },
+  {
+    "name": "Ivory Inn",
+    "address": "707 Heaven Street, London, United Kingdom",
+    "stars": 4,
+    "rating": 9.8,
+    "amenities": [
+      "Free Wi-Fi",
+      "Swimming pool",
+      "Fitness center",
+      "Restaurant"
+    ],
+    "price_per_night": 169
+  },
+  {
+    "name": "Majestic Resort",
+    "address": "123 Main Street, Tokyo, Japan",
+    "stars": 5,
+    "rating": 9.5,
+    "amenities": [
+      "Free Wi-Fi",
+      "Swimming pool",
+      "Fitness center",
+      "Restaurant",
+      "Bar",
+      "Room service"
+    ],
+    "price_per_night": 313
+  },
+  {
+    "name": "Golden Suites",
+    "address": "666 Sky Blvd, Tokyo, Japan",
+    "stars": 3,
+    "rating": 9.7,
+    "amenities": [
+      "Free Wi-Fi",
+      "Swimming pool",
+      "Fitness center"
+    ],
+    "price_per_night": 135
+  },
+  {
+    "name": "Sapphire Resort",
+    "address": "999 Mountain Road, Tokyo, Japan",
+    "stars": 4,
+    "rating": 9.8,
+    "amenities": [
+      "Free Wi-Fi",
+      "Swimming pool",
+      "Fitness center",
+      "Restaurant",
+      "Bar"
+    ],
+    "price_per_night": 187
+  },
+  {
+    "name": "Gold House",
+    "address": "King's First Blvd, Tokyo, Japan",
+    "stars": 3,
+    "rating": 8,
+    "amenities": [
+      "Free Wi-Fi",
+      "Swimming pool",
+      "Fitness center",
+      "Restaurant"
+    ],
+    "price_per_night": 117
+  },
+  {
+    "name": "Imperial Hotel",
+    "address": "666 Sky Blvd, Tokyo, Japan",
+    "stars": 4,
+    "rating": 6,
+    "amenities": [
+      "Free Wi-Fi",
+      "Swimming pool",
+      "Fitness center",
+      "Restaurant",
+      "Bar"
+    ],
+    "price_per_night": 194
+  },
+  {
+    "name": "Starlight Motel",
+    "address": "707 Heaven Street, Sydney, Australia",
+    "stars": 5,
+    "rating": 9.3,
+    "amenities": [
+      "Free Wi-Fi",
+      "Swimming pool",
+      "Fitness center",
+      "Restaurant",
+      "Bar",
+      "Room service"
+    ],
+    "price_per_night": 241
+  },
+  {
+    "name": "Crystal House",
+    "address": "123 Main Street, Sydney, Australia",
+    "stars": 5,
+    "rating": 9.9,
+    "amenities": [
+      "Free Wi-Fi",
+      "Swimming pool",
+      "Fitness center",
+      "Restaurant",
+      "Bar",
+      "Room service"
+    ],
+    "price_per_night": 234
+  },
+  {
+    "name": "Golden Hotel",
+    "address": "707 Heaven Street, Sydney, Australia",
+    "stars": 4,
+    "rating": 7.3,
+    "amenities": [
+      "Free Wi-Fi",
+      "Swimming pool",
+      "Fitness center",
+      "Restaurant"
+    ],
+    "price_per_night": 152
+  },
+  {
+    "name": "Emerald Oasis",
+    "address": "Garden Street, Sydney, Australia",
+    "stars": 5,
+    "rating": 7.9,
+    "amenities": [
+      "Free Wi-Fi",
+      "Swimming pool",
+      "Fitness center",
+      "Restaurant",
+      "Bar",
+      "Room service"
+    ],
+    "price_per_night": 299
+  },
+  {
+    "name": "Majestic Retreat",
+    "address": "1234 Rainbow Road, Sydney, Australia",
+    "stars": 3,
+    "rating": 10,
+    "amenities": [
+      "Free Wi-Fi",
+      "Swimming pool",
+      "Fitness center"
+    ],
+    "price_per_night": 101
+  }
+]
