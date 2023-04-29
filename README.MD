@@ -73,6 +73,6 @@ This is an end point for jumping from `/` endpoint to the EJS result page to sho
 2. When a user search for an origin city, the program will get all flights between this origin and other cities. Then the program will calculate Best score (`Balanced`, `Luxury`, `Affordable`) for all flights, and put them into a cache. In the cache, string like "JFK->LAX" will be treated as key. A timestamp will be added along too. If the timestamp expires (Currently, I defined it to expire every 24 hours), the next time the flight "JFK->LAX" is queried, the program will call getFlights() again. Before expiration, all the other call to get flights will use data from the cache.
 3. I applied a similar logic to cache the hotel data. However, the expiration data for hotel data is longer. It's currently defined as 30 days.
 
-## Potential Improvement
+## Potential Future Improvement
 1. The weight of features and recommendation logic can be further tuned. It will improve user's satisfaction about the recommended trips. 
 2. The speed of the finding trips algorithms can be further improved. It will allow searching for best trip in a larger pool of destination cities and hotels. 
