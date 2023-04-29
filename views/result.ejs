@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>
+        <%= title %>
+    </title>
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        th,
+        td {
+            text-align: left;
+            padding: 8px;
+            border-bottom: 1px solid #ddd;
+        }
+
+        th {
+            background-color: #4CAF50;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>
+        <%= "Best " + type + " Trip" %>
+    </h1>
+
+    <h5>
+        <%= "For your budget $" + data[0].budget + ", we found the best trip below at total price $" + data[0].price
+            + "." %>
+    </h5>
+
+    <h3> Flights </h3>
+    <table>
+        <thead>
+            <tr>
+                <th>Flight Type</th>
+                <th>Origin</th>
+                <th>Destination</th>
+                <th>Stops</th>
+                <th>Departure Time</th>
+                <th>Arrival Time</th>
+                <th>Duration (Hours)</th>
+                <th>Price</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% const goFlight=data[0].goFlight; %>
+                <% const backFlight=data[0].backFlight;%>
+                    <% const hotel=data[0].hotel;%>
+                        <tr>
+                            <td>
+                                <%= "Departing" %>
+                            </td>
+                            <td>
+                                <%= goFlight.from %>
+                            </td>
+                            <td>
+                                <%= goFlight.to %>
+                            </td>
+                            <td>
+                                <%= goFlight.stops.length===0 ? "N/A" : goFlight.stops.join(", ") %>
+                            </td>
+                            <td>
+                                <%= goFlight.departure_time %>
+                            </td>
+                            <td>
+                                <%= goFlight.arrival_time %>
+                            </td>
+                            <td>
+                                <%= goFlight.duration %>
+                            </td>
+                            <td>
+                                <%= " $" + goFlight.price %>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <%= "Returning" %>
+                            </td>
+                            <td>
+                                <%= backFlight.from %>
+                            </td>
+                            <td>
+                                <%= backFlight.to %>
+                            </td>
+                            <td>
+                                <%= backFlight.stops.length===0 ? "N/A" : backFlight.stops.join(", ") %>
+                            </td>
+                            <td>
+                                <%= backFlight.departure_time %>
+                            </td>
+                            <td>
+                                <%= backFlight.arrival_time %>
+                            </td>
+                            <td>
+                                <%= backFlight.duration %>
+                            </td>
+                            <td>
+                                <%= " $" + backFlight.price %>
+                            </td>
+                        </tr>
+        </tbody>
+    </table>
+
+
+    <table>
+        <thead>
+            <tr>
+                <th>Hotel</th>
+                <th>Address</th>
+                <th>Stars</th>
+                <th>Rating</th>
+                <th>Amenities</th>
+                <th>Price</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>
+                    <%= hotel.name %>
+                </td>
+                <td>
+                    <%= hotel.address %>
+                </td>
+                <td>
+                    <%= hotel.stars %>
+                </td>
+                <td>
+                    <%= hotel.rating %>
+                </td>
+                <td>
+                    <%= hotel.amenities.join(", ") %>
+                    </td>
+                    <td>
+                        <%= " $" + hotel.price_per_night %>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <br>
+    <button onclick=" window.location.href='/'">Go Back</button>
+
+</body>
+
+</html>

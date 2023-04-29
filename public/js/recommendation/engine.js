@@ -46,12 +46,41 @@ const scoreDiff = maxScore - minScore;
 // JSON file names for logging
 const logFile = 'public/data/log.json';
 
+// Indicates return how many records
+const topN = 1;
+
 /**
  * @berif Function that returns the recommended trip based on the user's input
  */
 function getTrip(req, res, next) {
+
     // Get the user's input
-    let { origin, nights, budget, type } = req.params;
+    let origin = req.query.origin;
+    let nights = req.query.nights;
+    let budget = req.query.budget;
+    let type = req.query.type;
+
+    // If any of these parameters is missing, return 400
+    if (!origin || !nights || !budget || !type) {
+
+        // Return 400 if any of the parameters is missing
+        res.status(400).send({ 'Message': 'Missing parameters. Needs: origin, nights, budget, type' });
+
+        // Return to the client
+        return;
+    }
+
+    // If the type is wrong, return 400
+    if (type !== 'balanced' && type !== 'luxury' && type !== 'affordable') {
+
+        // Return 400 if the type is wrong
+        res.status(400).send({ 'Message': 'Wrong type. Needs: balanced, luxury, affordable' });
+
+        // Return to the client
+        return;
+    }
+
+    // Tranform the data
     nights = parseInt(nights);
     budget = parseInt(budget);
 
@@ -59,17 +88,12 @@ function getTrip(req, res, next) {
     const parsed = `You are searching for a ${type} trip from ${origin} for ${nights} nights with a budget of $${budget}.`
     console.log(parsed);
 
-    // Set return number of records
-    const topN = 1;
-
     // Get the recommended trip
     const trip = recommendTrip(origin, nights, budget, type, topN);
     const tripJSON = JSON.stringify(trip, null, 2);
 
     // Set the response header
     res.set('Content-Type', 'application/json');
-
-    // console.log(trip);
 
     // Return to client
     if (trip.length === 0) {
@@ -122,10 +146,6 @@ function recommendTrip(originCity, numOfNights, budget, tripType, topN) {
 
         // Get the flights data for going to vacation (From DB or cache)
         const goFlightsData = getFlightsData(originAirport, destAirport);
-
-        // console.log(">>>>>>>>> Start");
-        // console.log(goFlightsData);
-        // console.log(">>>>>>>>> End");
 
         // Get the flights data for coming back from vacation (From DB or cache)
         const backFlightsData = getFlightsData(destAirport, originAirport);

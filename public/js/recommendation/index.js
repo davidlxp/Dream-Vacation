@@ -18,9 +18,9 @@ const router = express.Router();
 
 /* Route for renewing hotel JSON file.
  * It will return the JSON file of renewed content back to the client too
- * For example: /origin/New York City/nights/3/budget/6000/type/balanced */
+ * For example: http://localhost:80/api/search?origin=${origin}&nights=${nights}&budget=${budget}&type=${type} */
 router.get(
-    '/origin/:origin/nights/:nights/budget/:budget/type/:type',
+    '/api/search',
     wrap(getTrip)
 );
 

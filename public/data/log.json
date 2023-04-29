@@ -2,8 +2,8 @@
   {
     "budget": 2000,
     "nights": 3,
-    "price": 1806,
-    "score": 7.8,
+    "price": 1506,
+    "score": 7.5,
     "goFlight": {
       "from": "JFK",
       "to": "LAX",
@@ -35,22 +35,21 @@
       }
     },
     "hotel": {
-      "name": "Granite Suites",
-      "address": "Garden Street, Los Angeles, United States",
-      "stars": 4,
-      "rating": 4.4,
+      "name": "Luxury Resort",
+      "address": "King's First Blvd, Los Angeles, United States",
+      "stars": 3,
+      "rating": 5.2,
       "amenities": [
         "Free Wi-Fi",
         "Swimming pool",
         "Fitness center",
-        "Restaurant",
-        "Bar"
+        "Restaurant"
       ],
-      "price_per_night": 208,
+      "price_per_night": 108,
       "score": {
-        "balanced": 6.1,
-        "luxury": 6.3,
-        "affordable": 6.2
+        "balanced": 6.5,
+        "luxury": 5.7,
+        "affordable": 8
       }
     }
   }

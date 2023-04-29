@@ -5,22 +5,72 @@
     <meta charset="utf-8">
     <title>Travel Search</title>
     <style>
-        label {
-            display: block;
-            margin-bottom: 5px;
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            color: #444;
         }
 
-        input,
-        select {
-            display: block;
+        h1 {
+            text-align: center;
+            font-size: 2.5em;
+            margin-bottom: 30px;
+        }
+
+        form {
+            width: 80%;
+            max-width: 500px;
+            margin: 0 auto;
+            padding: 20px;
+            border-radius: 5px;
+            background-color: #fff;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        label {
+            font-size: 1.2em;
             margin-bottom: 10px;
+        }
+
+        input[type="number"],
+        select {
+            border: 1px solid #ccc;
+            border-radius: 3px;
+            font-size: 1.1em;
+            padding: 8px;
+            margin-bottom: 10px;
+            width: 100%;
+        }
+
+        select {
+            background-color: #fff;
+        }
+
+        button[type="submit"] {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 3px;
+            padding: 10px 20px;
+            font-size: 1.2em;
+            cursor: pointer;
+            margin-top: 20px;
+            transition: all 0.3s ease;
+        }
+
+        button[type="submit"]:hover {
+            background-color: #0062cc;
+        }
+
+        option {
+            font-size: 1.1em;
         }
     </style>
 </head>
 
 <body>
     <h1>Find Your Dream Vacation</h1>
-    <form action="/search" method="post">
+    <form action="/search" method="get">
         <label for="origin">Origin City:</label>
         <select id="origin" name="origin" required>
             <option value="">Please select an origin city</option>
@@ -37,6 +87,17 @@
 
         <label for="budget">Budget:</label>
         <input type="number" id="budget" name="budget" min="1" max="10000" required>
+
+        <label for="type">Travel Type:</label>
+        <select id="type" name="type" required>
+            <option value="">Please select a travel type</option>
+            <% var types=['balanced', 'luxury' , 'affordable' ]; %>
+                <% types.forEach(function(type) { %>
+                    <option value="<%= type %>">
+                        <%= type.charAt(0).toUpperCase() + type.slice(1) %>
+                    </option>
+                    <% }); %>
+        </select>
 
         <button type="submit">Search</button>
     </form>
