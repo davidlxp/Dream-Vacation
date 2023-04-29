@@ -11,8 +11,14 @@ import geolib from 'geolib';
 import fs from 'fs';
 
 // JSON file names
-const flightsFile = 'flights.json';
-const hotelsFile = 'hotels.json';
+const flightsFile = 'public/data/flights.json';
+const hotelsFile = 'public/data/hotels.json';
+
+/* Number of items to generate. Below are: 
+ * 1. Number of flights between each pair of city. e.g., LAX -> SFO is a pair 
+ * 2. Number of hotels in each city */
+const pairs_flightsNum = 5;
+const city_hotelNum = 5;
 
 //---------------------------------------//
 // Variables related to flight generation 
@@ -31,21 +37,28 @@ const airports = {
 const maxStops = 2;
 
 // The extra hours each stop will add to the total flight time
-const extraHoursPerStop = 3;
+const maxExtraHoursPerStop = 2;
+const minExtraHoursPerStop = 1;
 
 /* Having stop is not preferrable in traveling. Thus, I estimate 
  * that adding one more stop will make the ticket x% cheaper based on the original price */
-const stopDiscountRate = 0.1;
+const maxStopDiscountRate = 0.1;
+const minStopDiscountRate = 0.05;
 
 // Cost per km of flight
-const costPerKm = 0.15;
+const minCostPerKm = 0.15;
+const maxCostPerKm = 0.17;
 
 // Average flight speed (km per hour)
-const flightSpeed = 850;
+const minFlightSpeed = 850;
+const maxFlightSpeed = 900;
 
 // The earliest and latest departure time (in 24 hours scale)
 const minFlightTime = 6;
 const maxFlightTime = 22;
+
+// The price will change slightly within the range of +/- x% compared to original price
+const priceRandomnessBound = 0.05;
 
 //---------------------------------------//
 // Variables related to hotel generation 
@@ -93,7 +106,7 @@ const amenitiesPool = ["Free Wi-Fi", "Swimming pool", "Fitness center",
 
 // Max and Min of hotel rating 
 const maxRating = 10;
-const minRating = 5;
+const minRating = 3;
 
 // Max and Min of hotel stars
 const maxStars = 5;
@@ -130,8 +143,8 @@ function generateFlights(req, res, next) {
             // Skip the origin and destination are the same
             if (i == j) continue;
 
-            // Create 5 flights between each pair
-            for (let k = 0; k < 5; ++k) {
+            // Create N flights between each pair
+            for (let k = 0; k < pairs_flightsNum; ++k) {
                 flights.push(getOneFlight(Object.keys(airports)[i], Object.keys(airports)[j]));
             }
         }
@@ -167,8 +180,8 @@ function generateHotels(req, res, next) {
         // Get the airport name
         const airport = Object.keys(airportsAddress)[i];
 
-        // Create 5 hotels for one airport destination
-        for (let j = 0; j < 5; ++j) {
+        // Create N hotels for one airport destination
+        for (let j = 0; j < city_hotelNum; ++j) {
             hotels.push(getOneHotel(airport));
         }
     }
@@ -218,7 +231,9 @@ function getOneFlight(fromAirport, toAirport) {
     let distance = geolib.getDistance(airports[fromAirport], airports[toAirport]) / 1000;
 
     // Calculate hours needed, taking hours caused by extra stops into account
+    let flightSpeed = Math.random() * (maxFlightSpeed - minFlightSpeed) + minFlightSpeed;
     let hours = distance / flightSpeed;
+    let extraHoursPerStop = Math.random() * (maxExtraHoursPerStop - minExtraHoursPerStop) + minExtraHoursPerStop;
     hours = Math.ceil(hours + numStops * extraHoursPerStop);
 
     /* Randomly generate departure time. The common departureTime is between 6am - 10pm */
@@ -240,7 +255,7 @@ function getOneFlight(fromAirport, toAirport) {
         price: price,
         departure_time: departureTime,
         arrival_time: arrivalTime,
-        hours: hours
+        duration: hours
     };
 }
 
@@ -278,12 +293,15 @@ function getFakeMidAiport() {
 function estFlightPrice(distance, numStops, departureTimeNum) {
 
     // Original price
+    let costPerKm = Math.random() * (maxCostPerKm - minCostPerKm) + minCostPerKm;
     let price = distance * costPerKm;
 
-    // Introduce some randomness
-    price = price * (1 + Math.random() * 0.1);
+    /* Introduce some randomness */
+    const priceRandomness = (Math.random() * 2 * priceRandomnessBound) - priceRandomnessBound;
+    price = price * (1 + priceRandomness);
 
     // Reduce price due to more stops
+    let stopDiscountRate = Math.random() * (maxStopDiscountRate - minStopDiscountRate) + minStopDiscountRate;
     price = price * (1 - numStops * stopDiscountRate);
 
     // Cost reduction due to not preferrable departure time

@@ -1,0 +1,47 @@
+{
+    "balanced": {
+        "flight": {
+            "price": 0.2,
+            "duration": 0.2,
+            "stops": 0.2,
+            "departureTime": 0.2,
+            "arrivalTime": 0.2
+        },
+        "hotel": {
+            "star": 0.2,
+            "rating": 0.3,
+            "price": 0.3,
+            "amenities": 0.2
+        }
+    },
+    "luxury": {
+        "flight": {
+            "price": 0.05,
+            "duration": 0.3,
+            "stops": 0.4,
+            "departureTime": 0.1,
+            "arrivalTime": 0.1
+        },
+        "hotel": {
+            "star": 0.3,
+            "rating": 0.3,
+            "price": 0.1,
+            "amenities": 0.3
+        }
+    },
+    "affordable": {
+        "flight": {
+            "price": 0.6,
+            "duration": 0.1,
+            "stops": 0.1,
+            "departureTime": 0.1,
+            "arrivalTime": 0.1
+        },
+        "hotel": {
+            "star": 0.1,
+            "rating": 0.2,
+            "price": 0.6,
+            "amenities": 0.1
+        }
+    }
+}

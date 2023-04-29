@@ -13,6 +13,7 @@ import bodyParser from 'body-parser'
 
 // Import contents from other scripts
 import renewRouter from './public/js/tools/index.js'
+import recommendRouter from './public/js/recommendation/index.js'
 
 // Create the app
 const app = express();
@@ -27,12 +28,9 @@ app.use(bodyParser.json());
 
 // Connect the app with the other specific route handler
 app.use(renewRouter);
+app.use(recommendRouter);
 
 // Define routes
-// app.get('/', (req, res) => {
-//     console.log('Visited the main route');
-//     res.json('Hi! Welcome Travel Search Backend Server!');
-// });
 app.get('/', (req, res) => {
     res.render('index', { title: 'Home Page' });
 });

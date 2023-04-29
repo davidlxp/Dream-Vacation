@@ -11,14 +11,14 @@
 import fs from 'fs';
 
 // The directory that contains flights data
-const flightsFile = 'public/data/flights';
-const hotelsFile = 'public/data/hotels';
+const flightsFile = 'public/data/flights.json';
+const hotelsFile = 'public/data/hotels.json';
 
 /**
  * Function acts as a fake database query function that returns the flights data
  * @param {*} origin - The origin airport code of the flight
  * @param {*} destination - The destination airport code of the flight
- * @returns The corresponding flights data
+ * @returns The corresponding flights data in JSON object format
  */
 function getFlights(origin, destination) {
 
@@ -27,14 +27,14 @@ function getFlights(origin, destination) {
     const data = JSON.parse(raw);
 
     // Find the flights records that match the origin and destination
-    const result = data.find(record => record.from === origin && record.to === destination);
+    const result = data.filter(record => record.from === origin && record.to === destination);
     return result;
 }
 
 /**
  * Function acts as a fake database query function that returns the hotels data
  * @param {*} destination - The destination city of the hotel
- * @returns The corresponding hotels data
+ * @returns The corresponding hotels data in JSON object format
  */
 function getHotels(destination) {
 
@@ -43,8 +43,11 @@ function getHotels(destination) {
     const data = JSON.parse(raw);
 
     // Find the flights records that match the origin and destination
-    const result = data.find(record => {
-        record.address.split(",")[1].trim() === destination;
+    const result = data.filter(record => {
+        return (record.address.split(",")[1].trim() === destination);
     });
     return result;
 }
+
+// Export the functions
+export { getFlights, getHotels };

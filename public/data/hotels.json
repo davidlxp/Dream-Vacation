@@ -1,0 +1,340 @@
+[
+  {
+    "name": "Gold Suites",
+    "address": "9970 Creepy Road, New York City, United States",
+    "stars": 5,
+    "rating": 5.5,
+    "amenities": [
+      "Free Wi-Fi",
+      "Swimming pool",
+      "Fitness center",
+      "Restaurant",
+      "Bar"
+    ],
+    "price_per_night": 405
+  },
+  {
+    "name": "Gold Shelter",
+    "address": "9970 Creepy Road, New York City, United States",
+    "stars": 3,
+    "rating": 6.4,
+    "amenities": [
+      "Free Wi-Fi",
+      "Swimming pool",
+      "Fitness center",
+      "Restaurant"
+    ],
+    "price_per_night": 128
+  },
+  {
+    "name": "Quartz Inn",
+    "address": "666 Sky Blvd, New York City, United States",
+    "stars": 5,
+    "rating": 9,
+    "amenities": [
+      "Free Wi-Fi",
+      "Swimming pool",
+      "Fitness center",
+      "Restaurant",
+      "Bar"
+    ],
+    "price_per_night": 433
+  },
+  {
+    "name": "Jade Retreat",
+    "address": "Garden Street, New York City, United States",
+    "stars": 4,
+    "rating": 8.9,
+    "amenities": [
+      "Free Wi-Fi",
+      "Swimming pool",
+      "Fitness center",
+      "Restaurant"
+    ],
+    "price_per_night": 163
+  },
+  {
+    "name": "Emerald Retreat",
+    "address": "Garden Street, New York City, United States",
+    "stars": 5,
+    "rating": 7.9,
+    "amenities": [
+      "Free Wi-Fi",
+      "Swimming pool",
+      "Fitness center",
+      "Restaurant",
+      "Bar"
+    ],
+    "price_per_night": 406
+  },
+  {
+    "name": "Silver Shelter",
+    "address": "1234 Rainbow Road, Los Angeles, United States",
+    "stars": 4,
+    "rating": 3.1,
+    "amenities": [
+      "Free Wi-Fi",
+      "Swimming pool",
+      "Fitness center",
+      "Restaurant"
+    ],
+    "price_per_night": 215
+  },
+  {
+    "name": "Luxury Resort",
+    "address": "King's First Blvd, Los Angeles, United States",
+    "stars": 3,
+    "rating": 5.2,
+    "amenities": [
+      "Free Wi-Fi",
+      "Swimming pool",
+      "Fitness center",
+      "Restaurant"
+    ],
+    "price_per_night": 108
+  },
+  {
+    "name": "Silver Shelter",
+    "address": "123 Main Street, Los Angeles, United States",
+    "stars": 5,
+    "rating": 4.3,
+    "amenities": [
+      "Free Wi-Fi",
+      "Swimming pool",
+      "Fitness center",
+      "Restaurant",
+      "Bar"
+    ],
+    "price_per_night": 387
+  },
+  {
+    "name": "Granite Suites",
+    "address": "Garden Street, Los Angeles, United States",
+    "stars": 4,
+    "rating": 4.4,
+    "amenities": [
+      "Free Wi-Fi",
+      "Swimming pool",
+      "Fitness center",
+      "Restaurant",
+      "Bar"
+    ],
+    "price_per_night": 208
+  },
+  {
+    "name": "Royal Inn",
+    "address": "666 Sky Blvd, Los Angeles, United States",
+    "stars": 4,
+    "rating": 5.2,
+    "amenities": [
+      "Free Wi-Fi",
+      "Swimming pool",
+      "Fitness center",
+      "Restaurant"
+    ],
+    "price_per_night": 163
+  },
+  {
+    "name": "Regal Resort",
+    "address": "King's First Blvd, London, United Kingdom",
+    "stars": 3,
+    "rating": 3.4,
+    "amenities": [
+      "Free Wi-Fi",
+      "Swimming pool",
+      "Fitness center",
+      "Restaurant"
+    ],
+    "price_per_night": 101
+  },
+  {
+    "name": "Grand Shelter",
+    "address": "King's First Blvd, London, United Kingdom",
+    "stars": 5,
+    "rating": 6,
+    "amenities": [
+      "Free Wi-Fi",
+      "Swimming pool",
+      "Fitness center",
+      "Restaurant",
+      "Bar"
+    ],
+    "price_per_night": 210
+  },
+  {
+    "name": "Starlight House",
+    "address": "707 Heaven Street, London, United Kingdom",
+    "stars": 5,
+    "rating": 6,
+    "amenities": [
+      "Free Wi-Fi",
+      "Swimming pool",
+      "Fitness center",
+      "Restaurant",
+      "Bar",
+      "Room service"
+    ],
+    "price_per_night": 249
+  },
+  {
+    "name": "Majestic Inn",
+    "address": "1234 Rainbow Road, London, United Kingdom",
+    "stars": 3,
+    "rating": 8.7,
+    "amenities": [
+      "Free Wi-Fi",
+      "Swimming pool",
+      "Fitness center",
+      "Restaurant"
+    ],
+    "price_per_night": 133
+  },
+  {
+    "name": "Luxury Suites",
+    "address": "1234 Rainbow Road, London, United Kingdom",
+    "stars": 3,
+    "rating": 8.2,
+    "amenities": [
+      "Free Wi-Fi",
+      "Swimming pool",
+      "Fitness center",
+      "Restaurant"
+    ],
+    "price_per_night": 144
+  },
+  {
+    "name": "Sapphire Hotel",
+    "address": "666 Sky Blvd, Tokyo, Japan",
+    "stars": 3,
+    "rating": 6,
+    "amenities": [
+      "Free Wi-Fi",
+      "Swimming pool",
+      "Fitness center"
+    ],
+    "price_per_night": 87
+  },
+  {
+    "name": "Jade Resort",
+    "address": "123 Main Street, Tokyo, Japan",
+    "stars": 4,
+    "rating": 4.9,
+    "amenities": [
+      "Free Wi-Fi",
+      "Swimming pool",
+      "Fitness center",
+      "Restaurant"
+    ],
+    "price_per_night": 129
+  },
+  {
+    "name": "Gold Retreat",
+    "address": "123 Main Street, Tokyo, Japan",
+    "stars": 5,
+    "rating": 3.5,
+    "amenities": [
+      "Free Wi-Fi",
+      "Swimming pool",
+      "Fitness center",
+      "Restaurant",
+      "Bar",
+      "Room service"
+    ],
+    "price_per_night": 360
+  },
+  {
+    "name": "Emperor Shelter",
+    "address": "9970 Creepy Road, Tokyo, Japan",
+    "stars": 5,
+    "rating": 5.2,
+    "amenities": [
+      "Free Wi-Fi",
+      "Swimming pool",
+      "Fitness center",
+      "Restaurant",
+      "Bar",
+      "Room service"
+    ],
+    "price_per_night": 444
+  },
+  {
+    "name": "Emperor Resort",
+    "address": "999 Mountain Road, Tokyo, Japan",
+    "stars": 4,
+    "rating": 4.4,
+    "amenities": [
+      "Free Wi-Fi",
+      "Swimming pool",
+      "Fitness center",
+      "Restaurant",
+      "Bar"
+    ],
+    "price_per_night": 205
+  },
+  {
+    "name": "Royal Shelter",
+    "address": "Garden Street, Sydney, Australia",
+    "stars": 3,
+    "rating": 8.8,
+    "amenities": [
+      "Free Wi-Fi",
+      "Swimming pool",
+      "Fitness center"
+    ],
+    "price_per_night": 110
+  },
+  {
+    "name": "Copper House",
+    "address": "9970 Creepy Road, Sydney, Australia",
+    "stars": 3,
+    "rating": 6.6,
+    "amenities": [
+      "Free Wi-Fi",
+      "Swimming pool",
+      "Fitness center"
+    ],
+    "price_per_night": 127
+  },
+  {
+    "name": "Ivory Inn",
+    "address": "999 Mountain Road, Sydney, Australia",
+    "stars": 5,
+    "rating": 7.9,
+    "amenities": [
+      "Free Wi-Fi",
+      "Swimming pool",
+      "Fitness center",
+      "Restaurant",
+      "Bar",
+      "Room service"
+    ],
+    "price_per_night": 465
+  },
+  {
+    "name": "Emerald Retreat",
+    "address": "King's First Blvd, Sydney, Australia",
+    "stars": 5,
+    "rating": 3.9,
+    "amenities": [
+      "Free Wi-Fi",
+      "Swimming pool",
+      "Fitness center",
+      "Restaurant",
+      "Bar"
+    ],
+    "price_per_night": 451
+  },
+  {
+    "name": "Grand Lodge",
+    "address": "9970 Creepy Road, Sydney, Australia",
+    "stars": 4,
+    "rating": 9.7,
+    "amenities": [
+      "Free Wi-Fi",
+      "Swimming pool",
+      "Fitness center",
+      "Restaurant"
+    ],
+    "price_per_night": 154
+  }
+]

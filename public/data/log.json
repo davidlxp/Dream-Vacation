@@ -1,0 +1,57 @@
+[
+  {
+    "budget": 2000,
+    "nights": 3,
+    "price": 1806,
+    "score": 7.8,
+    "goFlight": {
+      "from": "JFK",
+      "to": "LAX",
+      "stops": [],
+      "price": 615,
+      "departure_time": "14:00",
+      "arrival_time": "19:00",
+      "duration": 5,
+      "score": {
+        "balanced": 8.3,
+        "luxury": 9,
+        "affordable": 6.1
+      }
+    },
+    "backFlight": {
+      "from": "LAX",
+      "to": "JFK",
+      "stops": [
+        "CCF"
+      ],
+      "price": 567,
+      "departure_time": "13:00",
+      "arrival_time": "19:00",
+      "duration": 6,
+      "score": {
+        "balanced": 7.7,
+        "luxury": 8.1,
+        "affordable": 5.2
+      }
+    },
+    "hotel": {
+      "name": "Granite Suites",
+      "address": "Garden Street, Los Angeles, United States",
+      "stars": 4,
+      "rating": 4.4,
+      "amenities": [
+        "Free Wi-Fi",
+        "Swimming pool",
+        "Fitness center",
+        "Restaurant",
+        "Bar"
+      ],
+      "price_per_night": 208,
+      "score": {
+        "balanced": 6.1,
+        "luxury": 6.3,
+        "affordable": 6.2
+      }
+    }
+  }
+]
