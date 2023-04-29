@@ -62,8 +62,8 @@ This is an end point for jumping from `/` endpoint to the EJS result page to sho
 ## Recommendation Logic
 
 1. The internal Best score (will be called b-score later for convenience) will be at a scale of 10. The number will be like 9.5, 5.6, etc...
-2. The b-score of a trip a combination of `departure_flight_score`, `arriving_flight_score`, and `hotel_score` in that trip.
-3. The `departure_flight_score` and `arriving_flight_score` are calcualted using a same logic. In that logic, features of a flight like `price`, `flight duration`, `number of stops`, `departure time` and `arrival time` are taken into consideration. A score has been assigned to each one of these features. Before combining the features' scores into a score for the flight, a weight for the features are applied. he weight can be found at `public/data/score-weights.json`. Please refers to the code for more details.
+2. The b-score of a trip a combination of `departure_flight_score`, `arriving_flight_score`, and `hotel_score` of that trip.
+3. The `departure_flight_score` and `arriving_flight_score` are calculated using a same logic. In that logic, features of a flight like `price`, `flight duration`, `number of stops`, `departure time` and `arrival time` are taken into consideration. A score has been assigned to each one of these features. Before combining the features' scores into a score for the flight, a weight for the features are applied. he weight can be found at `public/data/score-weights.json`. Please refers to the code for more details.
 4. Similarly, the `hotel_score` is calcualted by refering to features like `stars`, `rating`, `price`, and `number of amenities`. Weighted scores from `public/data/score-weights.json` are also applied for calculating `hotel_score`.
 5. Eventually, for the trips which meet the client's budgets, the program will sort them by their b-score. The top trip will be return to the client
 6. Please note that, when the user choose different type of trip (`Balanced`, `Luxury`, `Affordable`), the weight score for features distinctly are different.
