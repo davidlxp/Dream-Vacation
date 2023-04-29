@@ -29,3 +29,41 @@ In the based URL, the program provides a form which allows the users to submit v
 
 `/api/search?origin=${origin}&nights=${nights}&budget=${budget}&type=${type}`:
 This is an API of our backend services. In the endpoint, you will provide `origin city`, `budget`, `number of nights`, and `type of trip`. The program will find the best trip according to your needs. Then, it will return a JSON file contains all the information about that trip
+
+`/search?origin=${origin}&nights=${nights}&budget=${budget}&type=${type}`:
+This is an end point for jumping from `/` endpoint to the EJS result page to show the best trip result to the client. Within the endpoint, the program send a HTTP request to the `/api/search` endpoint above to request for JSON data. Then, it renders it in the `result.ejs`
+
+`renew/flights`: Calling this endpoint will renew the data in JSON file `public/data/flights.json`, which is treated as a database for holding randomly generated flights data
+
+`renew/hotels`: Calling this endpoint will renew the data in JSON file `public/data/hotels.json`, which is treated as a database for holding randomly generated hotels data
+
+## Project Structure
+
+`app.js`: It contains implementation of `/` and `/search` endpoints. It also wire the endpoints passed from two routers. These two routers work for recommendation and random data renewing. We will go over them later.
+
+`views/index.ejs`: It renders the form that you will see at `/` endpoint
+
+`views/notFound.ejs`: It renders the HTML page that you will see when no trip is found
+
+`views/result.ejs`: It renders the HTML page that you will see for listing the best trip result
+
+`public/data`: It contains all the data in JSON format. It includes randomly generated flights and hotels data, a log file for debugging. It also contains a weight file, which has weight score for different features for calcuating weighted recommendation score.
+
+`public/js/tools/index.js`: It has router for providing endpoints `renew/flights` and `renew/hotels`
+
+`public/js/tools/generators.js`: It has function and logics for randomly generating flights and hotels
+
+`public/js/recommendation/index.js`: It has router for providing endpoint `api/search`
+
+`public/js/recommendation/queries.js`: It has functions for querying from flights and hotels "database" (We pretend their JSON file as external database, which comes with a cost when calling). The function will require the users to provide origin and destination cities for finding flights, and providing destination city for finding hotel.
+
+`public/js/recommendation/engine.js`: It contains the core logics and functions to provide the user the best trip combination during a search.
+
+## Recommendation Logic
+
+1. The internal Best score (will be called b-score later for convenience) will be at a scale of 10. The number will be like 9.5, 5.6, etc...
+2. The b-score of a trip a combination of `departure_flight_score`, `arriving_flight_score`, and `hotel_score` in that trip.
+3. The `departure_flight_score` and `arriving_flight_score` are calcualted using a same logic. In that logic, features of a flight like `price`, `flight duration`, `number of stops`, `departure time` and `arrival time` are taken into consideration. A score has been assigned to each one of these features. Before combining the features' scores into a score for the flight, a weight for the features are applied. he weight can be found at `public/data/score-weights.json`. Please refers to the code for more details.
+4. Similarly, the `hotel_score` is calcualted by refering to features like `stars`, `rating`, `price`, and `number of amenities`. Weighted scores from `public/data/score-weights.json` are also applied for calculating `hotel_score`.
+5. Eventually, for the trips which meet the client's budgets, the program will sort them by their b-score. The top trip will be return to the client
+6. Please note that, when the user choose different type of trip (`Balanced`, `Luxury`, `Affordable`), the weight score for features distinctly are different.
